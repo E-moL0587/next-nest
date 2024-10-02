@@ -7,7 +7,7 @@ export default function Home() {
 
   const fetchMessage = async () => {
     try {
-      const res = await fetch('https://next-nest-app.onrender.com/hello', {
+      const res = await fetch('http://localhost:3001/hello', {
         credentials: 'include'
       });
       const data = await res.json();
