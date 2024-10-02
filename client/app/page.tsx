@@ -7,9 +7,12 @@ export default function Home() {
 
   const fetchMessage = async () => {
     try {
-      const res = await fetch('http://localhost:3001/hello', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`, {
         credentials: 'include'
       });
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
       const data = await res.json();
       setMessage(data.message);
     } catch (error) {
