@@ -1,0 +1,8 @@
+{
+  "name": "next-nest",
+  "version": "1.0.0",
+  "scripts": {},
+  "dependencies": {
+    "next-nest": "file:"
+  }
+}
