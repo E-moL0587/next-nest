@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # サーバーをバックグラウンドで起動
-cd server && npm run start:prod &
+cd /app/server && npm run start:prod &
 
 # クライアントを起動
-cd ../client && npm run start
+cd /app/client && npm run start
